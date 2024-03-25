@@ -1,14 +1,14 @@
 import React from "react";
 
 function Routes(props){
-    const {projection, routes, selectedAirlineID} = props;
+    const {projection, routes, selectedAirline} = props;
     // TODO: 
     // return the routes of the selected airline; 
     // If the selectedAirlineID is null (i.e., no airline is selected), return <g></g>.
-    if (selectedAirlineID === null) {
+    if (selectedAirline === null) {
         return <g></g>; // No airline selected, return empty group
     } else {
-        // let target_routes = routes.filter(a => a.AirlineID === selectedAirlineID);
+        // let target_routes = routes.filter(a => a.AirlineID === selectedAirline);
         // return <g>
         //     {
         //         target_routes.map( d => <line key={d.ID}
@@ -21,7 +21,7 @@ function Routes(props){
         //             </line>
         //         )}   
         // </g>
-        const selectedRoutes = routes.filter(route => route.AirlineID === selectedAirlineID);
+        const selectedRoutes = routes.filter(route => route.AirlineID === selectedAirline);
         return (<g>
         {selectedRoutes.map((route, index) => (
             <line
