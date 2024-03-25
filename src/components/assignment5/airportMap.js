@@ -5,7 +5,7 @@ import { Routes } from './routes';
 import { count } from "d3";
 
 function AirportMap(props){
-    const {width, height, countries, airports, routes, selectedAirlineID} = props;
+    const {width, height, countries, airports, routes, selectedAirline} = props;
     //TODO: 
     // 1.Define a projection which is geoMercator; 
     // set .scale(97), and .translate([width/2, height/2+20]); 
@@ -43,7 +43,7 @@ function AirportMap(props){
                 }
             </g>
             
-            <Routes projection={projection} routes={routes} selectedAirlineID={selectedAirlineID} />
+            <Routes projection={projection} routes={routes} selectedAirline={selectedAirline} />
         </svg>
     );
 }
