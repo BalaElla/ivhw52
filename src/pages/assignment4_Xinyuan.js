@@ -7,6 +7,7 @@ import { groupByAirline, groupByAirport } from "../components/assignment5/utils"
 import { AirportMap }  from "../components/assignment5/airportMap";
 import { BarChart } from "../components/assignment5/barChart";
 
+import styles from "../styles/assignment5_styles.module.css";
 
 const csvUrl = 'https://gist.githubusercontent.com/hogwild/9367e694e12bd2616205e4b3e91285d5/raw/9b451dd6bcc148c3553f550c92096a1a58e1e1e5/airline-routes.csv';
 const mapUrl = 'https://gist.githubusercontent.com/hogwild/26558c07f9e4e89306f864412fbdba1d/raw/5458902712c01c79f36dc28db33e345ee71487eb/countries.geo.json';
@@ -58,13 +59,15 @@ function AirlineRoutes(){
     return <Container >
         <Row className={"justify-content-md-left"}>
             <Col lg={10} >
-                <h1>Airlines Routes</h1> 
+                <div className={styles.container}>
+                    <h1 className={styles.h1Style}>Airlines Routes</h1>
+                </div>
             </Col>
         </Row>  
         <Row className={"justify-content-md-left"}>
         <Col lg={4}>
             <h2>Airlines</h2>
-            <svg id={"barchart"} width={barchart_width} height={barchart_height}>
+            <svg id={"barchart"} width={barchart_width} height={barchart_height} className={styles.svgStyle}>
                 <BarChart offsetX={barchart_margin.left} offsetY={barchart_margin.top} 
                     height={barchart_inner_height} width={barchart_inner_width} data={airlines}
                     selectedAirline={selectedAirline} setSelectedAirline={setSelectedAirline}
@@ -73,7 +76,7 @@ function AirlineRoutes(){
         </Col>
         <Col lg={4} >
             <h2>Airports</h2>
-            <svg id={"map"} width={map_width} height={map_height}>
+            <svg id={"map"} width={map_width} height={map_height} className={styles.svgStyle}>
                 <AirportMap width={map_width} height={map_height} 
                     countries={map} airports={airports} routes={routes}
                     selectedAirline={selectedAirline}
