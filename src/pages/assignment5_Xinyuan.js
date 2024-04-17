@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { csv, json } from "d3";
 import { Row, Col, Container } from "react-bootstrap";
 
-import { groupByAirline, groupByAirport } from "../components/assignment5/utils";
-import { AirportMap }  from "../components/assignment5/airportMap";
-import { BarChart } from "../components/assignment5/barChart";
+import { groupByAirline, groupByAirport } from "../components/assignment5/assignment5/utils";
+import { AirportMap }  from "../components/assignment5/assignment5/airportMap";
+import { BarChart } from "../components/assignment5/assignment5/barChart";
 
 import styles from "../styles/assignment5_styles.module.css";
 
