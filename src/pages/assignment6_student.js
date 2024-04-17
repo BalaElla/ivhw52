@@ -60,7 +60,7 @@ function AirlineRoutes(){
     };
     let airlines = groupByAirline(routes);
     let airports = groupByAirport(routes);
-    console.log(cities);
+    // console.log(cities);
     console.log(airports);
 
     return (<Container >
